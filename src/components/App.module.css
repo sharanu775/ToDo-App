@@ -1,0 +1,135 @@
+/* 🌌 Fullscreen Center */
+.container {
+  /* 1. FORCE FULL SIZE */
+  width: 100vw;       /* 100% of Viewport Width */
+  min-height: 100vh;  /* 100% of Viewport Height */
+  
+  /* 2. CENTER CONTENT */
+  display: flex;
+  justify-content: center; /* Center horizontally (Left/Right) */
+  align-items: center;     /* Center vertically (Up/Down) */
+  
+  /* 3. STYLING */
+  background: #1a202c;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0; /* Remove padding so it's perfectly centered */
+}
+/* 📦 Card */
+.wrapper {
+  width: 100%;
+  max-width: 480px;
+
+  background: rgba(26, 32, 44, 0.85);
+  backdrop-filter: blur(12px);
+
+  padding: 28px;
+  border-radius: 18px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* 🏷 Title */
+.title {
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* ➕ Input Area */
+.inputGroup {
+  display: flex;
+  gap: 12px;
+
+  background: #2d3748;
+  padding: 12px;
+  border-radius: 14px;
+
+  margin-bottom: 28px;
+}
+
+input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+input::placeholder {
+  color: #a0aec0;
+}
+
+/* ➕ Add Button */
+.addBtn {
+  background: linear-gradient(135deg, #4299e1, #3182ce);
+  color: white;
+  border: none;
+  padding: 10px 26px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.addBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(66, 153, 225, 0.35);
+}
+
+/* 📋 List */
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+/* 🧩 Todo Item */
+.item {
+  background: #2d3748;
+  color: white;
+
+  margin-bottom: 14px;
+  padding: 18px 20px;
+
+  border-radius: 14px;
+  border-left: 5px solid #4299e1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  animation: slideIn 0.25s ease-out;
+}
+
+/* ❌ Delete */
+.deleteBtn {
+  background: transparent;
+  border: 1px solid #e53e3e;
+  color: #e53e3e;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  display: grid;
+  place-items: center;
+}
+
+.deleteBtn:hover {
+  background: #e53e3e;
+  color: white;
+}
+
+/* ✨ Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
